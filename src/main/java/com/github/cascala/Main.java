@@ -1,7 +1,7 @@
 public class Main {
 	public static void main( String[] args ) {
 		// ExprHandler example
-    	ExprHandlerSample exprHandlerSample = new exprHandlerSample();
+    	ExprHandlerSample exprHandlerSample = new ExprHandlerSample();
     	exprHandlerSample.run();
 
     	// Linear Algebra example
