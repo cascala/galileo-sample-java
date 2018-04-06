@@ -7,7 +7,17 @@
     <version>0.1.0</version>
 
     <name>galileo-sample-java</name>
-    <description>Add project description here</description>
+    <description>This Java project demonstrates how to use the Galileo math library</description>
+
+    <!-- Set correct dependency for Galileo -->
+    <dependencies>
+    <!-- https://mvnrepository.com/artifact/com.github.cascala/galileo -->
+        <dependency>
+            <groupId>com.github.cascala</groupId>
+            <artifactId>galileo_2.11</artifactId>
+            <version>0.1</version>
+        </dependency>
+    </dependencies>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,8 +30,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.6.0</version>
                 <configuration>
-                    <source>1.9</source>
-                    <target>1.9</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
