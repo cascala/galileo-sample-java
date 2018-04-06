@@ -11,7 +11,12 @@
 
     <!-- Set correct dependency for Galileo -->
     <dependencies>
-    <!-- https://mvnrepository.com/artifact/com.github.cascala/galileo -->
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.11.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.cascala/galileo -->
         <dependency>
             <groupId>com.github.cascala</groupId>
             <artifactId>galileo_2.11</artifactId>
