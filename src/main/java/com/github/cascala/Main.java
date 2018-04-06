@@ -12,7 +12,7 @@ public class Main {
     	NumberSample numberSample = new NumberSample();
     	numberSample.run();
 
-    	// Parser example
+		// Parser example
 		ParserSample parserSample = new ParserSample();
     	parserSample.run();
     }
