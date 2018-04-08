@@ -4,6 +4,10 @@ public class Main {
 		ExprHandlerSample exprHandlerSample = new ExprHandlerSample();
 		exprHandlerSample.run();
 
+		// Exprexample
+		ExprSample exprSample = new ExprSample();
+		exprSample.run();
+
 		// Linear Algebra example
 		LinAlgSample linAlgSample = new LinAlgSample();
 		linAlgSample.run();
