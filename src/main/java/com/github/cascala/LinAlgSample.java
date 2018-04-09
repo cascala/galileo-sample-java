@@ -6,7 +6,7 @@ import scala.collection.immutable.$colon$colon;
 import scala.collection.immutable.List$;
 import scala.collection.immutable.List;
 
-class LinAlgSample {
+class LinAlgSample implements SampleInterface {
 	// Helper that creates a scala List
 	public static<T> List<T> list(T ... ts ) {
 		List<T> result = List$.MODULE$.empty();
@@ -17,8 +17,6 @@ class LinAlgSample {
 	}
 
 	public void run(){
-		System.out.println( "Running " + getClass().getName() + ".run()"  );
-		
 		DenseMatrix matrixA = new DenseMatrix( 
 				list( 
 					list( new Variable( "a" ), new Number( 1 ) ),

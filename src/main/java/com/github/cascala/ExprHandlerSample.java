@@ -6,9 +6,8 @@ import galileo.exprhandler.ExprHandler;
 
 import scala.Option;
 
-class ExprHandlerSample {
+class ExprHandlerSample implements SampleInterface {
 	public void run(){
-		System.out.println( "Running " + getClass().getName() + ".run()"  );
 		ExprHandler exprHandler = new ExprHandler();
 		Expr input = new Variable( "a" );
 		Environment environment = new Environment( Option.apply( null ) );

@@ -1,23 +1,17 @@
+//import java.util.List;
+import java.util.ArrayList;
+
 public class Main {
 	public static void main( String[] args ) {
-		// ExprHandler example
-		ExprHandlerSample exprHandlerSample = new ExprHandlerSample();
-		exprHandlerSample.run();
-
-		// Exprexample
-		ExprSample exprSample = new ExprSample();
-		exprSample.run();
-
-		// Linear Algebra example
-		LinAlgSample linAlgSample = new LinAlgSample();
-		linAlgSample.run();
-
-		// Number example
-		NumberSample numberSample = new NumberSample();
-		numberSample.run();
-
-		// Parser example
-		ParserSample parserSample = new ParserSample();
-		parserSample.run();
+		ArrayList<SampleInterface> samples = new ArrayList<SampleInterface>();
+		samples.add( new ExprHandlerSample() );
+		samples.add( new ExprSample() );
+		samples.add( new LinAlgSample() );
+		samples.add( new NumberSample() );
+		samples.add( new ParserSample() );
+		for( SampleInterface sample : samples ) {
+			System.out.println( "Running " + sample.getClass().getName() + ".run()"  );
+			sample.run();
+		}
 	}
 }
