@@ -1,8 +1,8 @@
-import galileo.exprhandler.ExprHandler;
 import galileo.environment.Environment;
 import galileo.expr.Expr;
 import galileo.expr.Number;
 import galileo.expr.Variable;
+import galileo.exprhandler.ExprHandler;
 
 import scala.Option;
 

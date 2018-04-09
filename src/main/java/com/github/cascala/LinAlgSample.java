@@ -1,23 +1,47 @@
-import galileo.linalg.DenseMatrix;
-import galileo.expr.Expr;
 import galileo.expr.Number;
+import galileo.expr.Variable;
+import galileo.linalg.DenseMatrix;
 
-import java.util.ArrayList;
-
-import scala.collection.JavaConverters;
+import scala.collection.immutable.$colon$colon;
+import scala.collection.immutable.List$;
+import scala.collection.immutable.List;
 
 class LinAlgSample {
+	// Helper that creates a scala List
+	public static<T> List<T> list(T ... ts ) {
+		List<T> result = List$.MODULE$.empty();
+        for(int i = ts.length; i > 0; i--) {
+            result = new $colon$colon(ts[i - 1], result);
+        }
+        return result;
+	}
+
 	public void run(){
 		System.out.println( "Running " + getClass().getName() + ".run()"  );
-		// ArrayList constructor syntax is not very conducive to terse implementations
-		//DenseMatrix m = new DenseMatrix( [
-		ArrayList row = new ArrayList<Expr>(); //[ new Number( 1 ); new Number( 2 ); ];	
-		row.add( new Number( 1 ) );
-		row.add( new Number( 2 ) );
-		ArrayList matrix = new ArrayList<ArrayList<Expr>>();
-		matrix.add( row );
-		//               asScalaIterableConverter
-		//JavaConverters.asScalaIterableConverter( matrix.iterator() ); //.asScala();
-		//DenseMatrix denseMatrix = new DenseMatrix( matrix );
+		
+		DenseMatrix matrixA = new DenseMatrix( 
+				list( 
+					list( new Variable( "a" ), new Number( 1 ) ),
+					list( new Number( 2 ), new Variable( "b" ) )
+				) 
+			); 
+		DenseMatrix rhsB = new DenseMatrix( 
+				list( 
+					list( new Variable( "c" ) ),
+					list( new Number( 3 ) )
+				) 
+			); 
+
+		// Demonstration of the overloaded operator '*'
+		// In Scala, this is just matrixA * rhsB
+		System.out.println( matrixA.$times( rhsB ) );
+
+		// Demonstration of the overloaded operator '+'
+		// In Scala, this is just matrixA + matrixA
+		System.out.println( matrixA.$plus( matrixA ) );
+		System.out.println( matrixA.$plus( matrixA ).eval() );
+				
+		// Solve
+		System.out.println( matrixA.solve( rhsB ) );
 	}
 }
