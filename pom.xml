@@ -4,7 +4,7 @@
 
     <groupId>com.github.cascala</groupId>
     <artifactId>galileo-sample-java</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 
     <name>galileo-sample-java</name>
     <description>This Java project demonstrates how to use the Galileo math library</description>
@@ -20,7 +20,7 @@
         <dependency>
             <groupId>com.github.cascala</groupId>
             <artifactId>galileo_2.11</artifactId>
-            <version>0.1</version>
+            <version>0.1.1</version>
         </dependency>
     </dependencies>
 
